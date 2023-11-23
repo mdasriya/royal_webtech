@@ -1,0 +1,19 @@
+
+const mongoose = require("mongoose")
+
+const employeeSchema = mongoose.Schema({
+firstname:{type:"String", required:true},
+lastname:{type:"String", required:true},
+email:{type:"String", required:true},
+number:{type:"String", required:true},
+UserId:{type:"String", required:true},
+user:{type:"String", required:true}
+},{
+   versionKey:false
+})
+
+const EmployeeModel = mongoose.model("employee", employeeSchema)
+
+module.exports = {
+  EmployeeModel
+}
